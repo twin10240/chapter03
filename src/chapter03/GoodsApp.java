@@ -4,6 +4,8 @@ import mypackage.Goods2;
 
 public class GoodsApp {
 	public static void main(String[] args) {
+		System.out.println("git test!!");
+		
 		Goods goods = new Goods();
 //		private는 내부에서만 접근이 가능하다.
 //		goods.name = "nikon";
