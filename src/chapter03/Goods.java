@@ -1,11 +1,23 @@
 package chapter03;
 
 public class Goods {
-	private static int countofgoods;
+	private static int countOfgoods;
+	public static final double discount_rate = 0.3;
+	
 	private String name;
 	int price;
 	int countStock;
 	int countSold;
+	
+	public Goods() {
+//		Goods.countofgoods++;
+//		같은 클래스 안에서는 생략 가능
+		countOfgoods++;
+	}
+	
+	public static int getCountOfGoods() {
+		return countOfgoods;
+	}
 	
 	public String getName() {
 		return name;
@@ -43,8 +55,14 @@ public class Goods {
 		this.countSold = countSold;
 	}
 
-	void showInfo() {
+	public void showInfo() {
 		// private는 내부에서만 접근이 가능하다.
-		System.out.println(name);
+		System.out.println("Goods[name = " + name + ", price = " + price + ", countStock = " + countStock + ", countSold = " + countSold +"]");
+	}
+	
+	public int calcDiscountPrice(int percentage) {
+		int discountPrice = (price * percentage) / 100;
+		
+		return discountPrice;
 	}
 }
