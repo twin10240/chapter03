@@ -13,4 +13,12 @@ public class Person {
 	public Person(int height) {
 		System.out.println("Person(int) called");
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
 }

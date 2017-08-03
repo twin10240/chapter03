@@ -1,6 +1,9 @@
-package paint;
+package com.bigdata2017.paint.point;
 
-public class Point {
+import com.bigdata2017.paint.main.i.Drawable;
+import com.bigdata2017.paint.shape.Shape;
+
+public class Point extends Shape implements Drawable {
 	private int x;
 	private int y;
 	
@@ -32,5 +35,16 @@ public class Point {
 		}else {
 			System.out.println("점[x = " + x + ", y = " + y + "]을 지웠습니다.");
 		}
+	}
+
+	@Override
+	public void draw() {
+		show();
+	}
+
+	@Override
+	public int calcArea() {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 }
